@@ -12,7 +12,7 @@ It showcases previous projects, a resume, contact information and links to GitHu
 
 ## Usage
 
-The deployed website can be viewed here: https://dandycodes.github.io/updated-portfolio-page/
+The deployed website can be viewed here: https://dandycodes.github.io/portfolio/
 
 ## Credits
 
