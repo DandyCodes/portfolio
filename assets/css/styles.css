@@ -1,0 +1,165 @@
+:root {
+    scroll-behavior: smooth;
+    --greenish: #1abc9c;
+    --blueish: #375a7f;
+}
+
+.logo {
+    height: 2.5rem;
+    align-self: center;
+    margin: 0.5rem;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    cursor: default;
+}
+  
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -45%;
+    left: -60%;
+    z-index: -99;
+    background: url("../img/hero.jpg");
+    background-position: center;
+    animation: fly 20s ease-in-out infinite;
+}
+
+@keyframes fly {
+	0% {
+		background-size: 65%;
+        transform: rotate(0deg);
+	}
+    25% {
+        transform: rotate(-2deg);
+    }
+	50% {
+		background-size: 75%;
+	}
+    75% {
+        transform: rotate(4deg);
+    }
+	100% {
+        transform: rotate(0deg);
+		background-size: 65%;
+	}
+}
+
+#headshot {
+    margin: auto;
+    filter: drop-shadow(3px 5px 4px #111111);
+    width: 20rem;
+    position: relative;
+    bottom: 7rem;
+    margin-bottom: -5rem;
+    border: white solid 3px;
+    border-radius: 50%;
+}
+
+.columns {
+    gap: 1rem;
+    margin: 0;
+}
+
+main section {
+    border-top: thick var(--blueish) solid;
+    border-radius: 1rem;
+    margin: 2rem;
+    margin-top: 0;
+    padding: 2rem !important;
+}
+
+main section > p {
+    padding: 0.4rem;
+}
+
+.box {
+    transition: all 0.25s ease-in-out;
+}
+
+.box:hover {
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+    box-shadow: 0 0 5px var(--greenish);
+}
+
+.box .title {
+    transition: all 0.25s ease-in-out;
+}
+
+.box:hover .title {
+    color: var(--greenish);
+    text-shadow: 0 0 1px var(--greenish);
+}
+
+.box img {
+    height: 20rem;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0.7;
+    transition: all 0.25s ease-in-out;
+}
+
+.box:hover img {
+    opacity: 1;
+}
+
+#big img {
+    height: 40rem;
+}
+
+.project-label {
+    position: absolute;
+    left: -2.5rem;
+    bottom: 1rem;
+    background-color: var(--blueish);
+    padding: 1rem;
+    max-width: 20rem;
+    border-radius: 0.2rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.box:hover .project-label { 
+    box-shadow: 0 0 5px var(--greenish);
+}
+
+#big .project-label {
+    bottom: 5rem;
+}
+
+#contact section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#contact a {
+    color: unset;
+}
+
+#contact a:hover {
+    color: var(--greenish);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 769px) {
+    main section {
+        border-top: 0;
+        border-left: thick var(--blueish) solid;
+    }
+}
