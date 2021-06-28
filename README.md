@@ -14,16 +14,9 @@ It showcases previous projects, a resume, contact information and links to GitHu
 
 ## Table of Contents:
 
-- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Questions](#questions)
-
-### Installation
-
-Clone the repo then run this command within the repo directory:
-
-`n/a`
 
 ### Usage
 
