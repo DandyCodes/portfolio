@@ -6,8 +6,6 @@
 
 This repository contains John Barker's portfolio.
 
-It uses the _Bulma_ to achieve a clean, polished and responsive UI.
-
 It showcases previous projects, a resume, contact information and links to GitHub and LinkedIn profiles.
 
 ![a screenshot of the deployed website](./assets/img/screenshot.png)
