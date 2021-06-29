@@ -134,7 +134,7 @@ main section > p {
   max-width: 20rem;
   border-radius: 0.2rem;
   transition: all 0.25s ease-in-out;
-  height: fit-content;
+  height: max-content;
 }
 
 .box:hover .project-label {
