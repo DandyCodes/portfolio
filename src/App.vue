@@ -1,9 +1,22 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router"
-import SiteHeader from "./components/SiteHeader.vue"
 </script>
 
 <template>
-  <SiteHeader />
-  <RouterView />
+  <RouterView class="is-flex is-flex-direction-column" />
 </template>
+
+<style>
+html {
+  height: 100vh;
+}
+
+html,
+body,
+#app,
+#app > * {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+</style>

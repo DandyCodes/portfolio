@@ -36,20 +36,20 @@ function navBurgerClick(e: Event) {
 
         <div class="navbar-end">
           <RouterLink to="/about" class="navbar-item">
-            <o-icon pack="fas" icon="info-circle" /> <span class="pl-1">About</span>
-          </RouterLink>
-
-          <RouterLink to="/about" class="navbar-item"
-            ><o-icon pack="fas" icon="pen-ruler" /> <span class="pl-1">Projects</span>
+            <span class="main-nav-item">About</span>
           </RouterLink>
 
           <RouterLink to="/about" class="navbar-item">
-            <o-icon pack="fas" icon="address-book" /> <span class="pl-1">Contact</span>
+            <span class="main-nav-item">Projects</span>
+          </RouterLink>
+
+          <RouterLink to="/about" class="navbar-item">
+            <span class="main-nav-item">Contact</span>
           </RouterLink>
 
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
-              <o-icon pack="fas" icon="circle-question" /> <span>More</span>
+              <span class="main-nav-item">More</span>
             </a>
             <div class="navbar-dropdown">
               <RouterLink to="/about" class="navbar-link">
@@ -73,6 +73,29 @@ function navBurgerClick(e: Event) {
 <style lang="scss" scoped>
 @import "../assets/styles.scss";
 
+.navbar {
+  position: relative;
+  z-index: 1;
+  &::before {
+    z-index: -1;
+    background-color: $dark;
+    filter: opacity(0.75);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &::after {
+    z-index: -1;
+    filter: opacity(0.4);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: $white-ter thin solid;
+  }
+}
+
 #logo {
   width: 45px;
   height: 45px;
@@ -80,5 +103,26 @@ function navBurgerClick(e: Event) {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+
+.main-nav-item {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  line-height: 100%;
+  &::before {
+    content: "< ";
+    font-weight: 900;
+    font-size: 2rem;
+    color: $link;
+  }
+
+  &::after {
+    content: "/>";
+    font-weight: 900;
+    font-size: 2rem;
+    color: $link;
+  }
 }
 </style>

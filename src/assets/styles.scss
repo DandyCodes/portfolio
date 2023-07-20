@@ -87,7 +87,7 @@ $pagination-border-color: $border;
 
 $navbar-height: 4rem;
 
-$navbar-background-color: $primary;
+$navbar-background-color: transparent;
 $navbar-item-color: $text;
 $navbar-item-hover-color: $link;
 $navbar-item-hover-background-color: transparent;
@@ -95,7 +95,7 @@ $navbar-item-active-color: $link;
 $navbar-dropdown-arrow: #fff;
 $navbar-divider-background-color: rgba(0, 0, 0, 0.2);
 $navbar-dropdown-border-top: 1px solid $navbar-divider-background-color;
-$navbar-dropdown-background-color: $primary;
+$navbar-dropdown-background-color: transparent;
 $navbar-dropdown-item-hover-color: $grey-lighter;
 $navbar-dropdown-item-hover-background-color: transparent;
 $navbar-dropdown-item-active-background-color: transparent;
@@ -114,7 +114,10 @@ $progress-bar-background-color: $grey-dark;
 
 $panel-heading-background-color: $grey-dark;
 
-// IMPORT BULMA
+
+$dark: hsl(211, 5%, 10%);
+
+// // IMPORT BULMA
 @import "bulma/bulma";
 
 
